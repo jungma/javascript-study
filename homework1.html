@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+  // 문제 (변수명을 신중히 생각해서 만드세요)
+// 1. 4명이서 회비를 각자 10만원씩 냈고, 총 24만원을 사용하였다. 각자 나누어 받아야 할 금액은?
+
+let fee = 100000 * 4
+let expense = 240000
+let myMoney = (fee - expense) / 4
+
+document.write('1번 답 : ' + myMoney + '원');
+document.write('<br><br>');
+
+
+// 2.1억원을 카카오뱅크의 1년만기 정기예금에 가입 하였다. 연 이자율이 1.2%이지만, 이자에 대한 세금이 15.4%이다. 예금 만기후 받을 실수령 금액은?
+
+let myBank = 100000000;
+let interestRate = myBank * 1.2 / 100;
+let myReceipt  = myBank + (interestRate * 15.4 / 100);
+
+document.write('2번 답 : ' + myReceipt + '원');
+document.write('<br><br>');
+
+
+// 3.프리랜서 개발자가 월 500만원을 받고 있다. 3.3% 원천징수를 때고, 월 의료보험 10만원을 낸다. 개발자가 1년동안 한푼도 쓰지않고 모을 수 있는 금액은?
+
+let monthlyPay = 5000000;
+let tax = monthlyPay * 3.3 / 100;
+let monthlSavingMoney = monthlyPay - tax - 100000;
+
+document.write('3번 답 : ' + monthlSavingMoney * 12 + '원');
+
+document.write('<br><br>');
+
+
+// 4. 출력할 문구중에 일정 부분만 바꾸어서 출력하고 싶다. ? 부분을 수정해서 다음을 출력 하시오.
+
+const stringFirst = '올해 총 카드 사용 금액은 ';
+const stringLast = ' 입니다.';
+let stringChange1 = '오백만원', stringChange2 = '천만원', stringChange3 = '이천만원';
+
+document.write('4번 답 : ' + stringFirst + stringChange1 + stringLast + "<br>");
+document.write('4번 답 : ' + stringFirst + stringChange2 + stringLast + "<br>");
+document.write('4번 답 : ' + stringFirst + stringChange3 + stringLast);
+document.write('<br><br>');
+
+
+//5. 주어진 상수와 연산자를 사용하여 다음과 같이 출력 하시오.
+
+const string1 = '곱하기 ';
+const string2 = '는 ';
+const string3 = '이다.';
+const ten = 10;
+const five = 5;
+
+document.write('5번 답 : ' + ten + string1 + five + string2 + ten * 5 + string3);
+document.write('<br><br>');
+
+
+//6. 주어진 상수와 연산자를 사용하여 다음과 같이 출력 하시오.
+
+const string4 = '"';
+const string5 = '는 ';
+const string6 = '보다 같거나 크다';
+const string7 = '라는 명제는 ';
+const string8 = '이다.';
+const nine = 9;
+const three = 3;
+
+let proposition = nine >= three;
+
+document.write('6번 답 : ' + nine + string5 + three + string6 + string7 + proposition +  string8);
+document.write('<br><br>');
+
+
+//7.주어진 상수와 연산자를 사용하여 다음과 같이 출력 하시오. (논리 연산자 사용)
+
+const string9 = '"프리미엄 회원이거나 광고를 봤으면  ';
+const string10 = '이지만, 프리미엄 회원이 아니거나 광고를 보지 않았다면 ';
+const string11 = '이다"라는 명제는 거짓이다.';
+const isPremiumMember = false;
+const isWatchedAdd = true;
+
+document.write('7번 답 : ' + string9 + (isPremiumMember || isWatchedAdd) + string10 + (isPremiumMember && isWatchedAdd ) + string11);
+</script>
+</body>
+</html>
