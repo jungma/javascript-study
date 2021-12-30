@@ -7,11 +7,28 @@
 // // const returned1 = func1('argument1', 'argument2');
 // const returned1 = func1();
 
-const f1 = function(){
+// const f1 = function(){
 
-  console.log('함수 호출');
-}
+//   console.log('함수 호출');
+// }
 
-f1();
+// f1();
+
+// const scriptConst2 = 'a';
+// const func2 = function(parameter1) {
+//   const compare1 = scriptConst2 === parameter1;
+//   parameter1 = 'b';
+//   const compare2 = scriptConst2 === parameter1;
+// };
+// func2(scriptConst2);
+
+const scriptConst3 = [];
+const func3 = function(parameter1) {
+  const compare1 = scriptConst3 === parameter1;
+  parameter1.push('a');
+  scriptConst3.push('b');
+  const compare2 = scriptConst3 === parameter1;
+};
+func3(scriptConst3);
 
 </script>
